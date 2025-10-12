@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de acceso seguro para MB Transfer Punta Cana">
+  <title>MBT | Plataforma de Acceso</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="login-container fade-in" role="main" aria-label="Formulario de inicio de sesión">
+    <img src="LOGO.png" alt="Logo de MB Transfer Punta Cana" class="logo">
+    <h1 class="titulo">Plataforma de Acceso</h1>
+    <p class="subtitulo">Ingrese su llave de acceso para entrar al sistema interno de MB Transfer Punta Cana.</p>
+
+    <form id="loginForm" aria-label="Iniciar sesión">
+      <div class="input-group" role="group" aria-labelledby="accessLabel">
+        <label id="accessLabel" for="accessKey" class="sr-only">Llave de acceso</label>
+        <input 
+          type="password" 
+          id="accessKey" 
+          placeholder="Introducir llave de acceso" 
+          required 
+          aria-describedby="error-message"
+          autocomplete="off"
+        >
+        <span class="toggle-password" id="togglePassword" aria-label="Mostrar/ocultar contraseña" role="button" tabindex="0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+      <div id="message-container" class="message-container" role="alert" aria-live="polite"></div>
+      <button type="submit" class="btn" id="submitBtn">
+        <span class="btn-text">Acceder</span>
+        <span class="btn-loader" aria-hidden="true"></span>
+      </button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
